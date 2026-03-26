@@ -1,1 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prince Hub - Skill Based Entertainment</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
+        body {
+            background-color: #fdfaf3; /* Light Cream Background */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            color: #7d5e41; /* Muted Gold/Brown text */
+            padding-bottom: 50px;
+        }
+
+        /* Header Logo Section */
+        .logo-container {
+            border: 2px solid #e2d1b5;
+            padding: 10px 40px;
+            border-radius: 50px;
+            background: white;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .badge-skill {
+            background-color: #f7ede2;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+            border: 1px solid #eee0cb;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .feature-item {
+            background: white;
+            padding: 10px 20px;
+            border-radius: 15px;
+            border: 1px solid #eee0cb;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Main Card */
+        .main-card {
+            background: white;
+            width: 100%;
+            max-width: 400px;
+            border-radius: 40px;
+            padding: 40px 25px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border: 1px solid #f3e9d9;
+        }
+
+        h1 {
+            font-family: 'Georgia', serif;
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: #a6845d;
+        }
+
+        .description {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        /* Stats Row */
+        .stats-container {
+            background-color: #fdf5e9;
+            border-radius: 25px;
+            padding: 15px;
+            margin-bottom: 25px;
+        }
+
+        .stats-top {
+            display: flex;
+            justify-content: space-around;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* --- UPDATED: Moving Download Button --- */
+        .download-btn {
+            background: #d9bc95;
+            color: #4a3721;
+            width: 100%;
+            padding: 18px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(74, 55, 33, 0.2);
+
+            /* Ye main line hai jo animation start karegi */
+            animation: move-in-out 1.5s ease-in-out infinite;
+        }
+
+        /* Animation Define Karein (Move in/out effect) */
+        @keyframes move-in-out {
+            0% {
+                transform: scale(1) translateY(0);
+                box-shadow: 0 4px 10px rgba(74, 55, 33, 0.2);
+            }
+            50% {
+                transform: scale(1.03) translateY(-3px); /* Thoda bada aur upar */
+                box-shadow: 0 8px 15px rgba(74, 55, 33, 0.
+                  3); /* Shadow thodi failti hai */
+            }
+            100% {
+                transform: scale(1) translateY(0);
+                box-shadow: 0 4px 10px rgba(74, 55, 33, 0.2);
+            }
+        }
+
+        /* Hover karne pe animation slow ho jaaye */
+        .download-btn:hover {
+            animation: move-in-out 3s ease-in-out infinite; 
+            background-color: #c9ab85;
+        }
+
+        /* Click karne pe active effect */
+        .download-btn:active {
+            transform: scale(0.97);
+            animation: none; /* Press hone pe move mat ho */
+            box-shadow: 0 2px 5px rgba(74, 55, 33, 0.4);
+        }
+
+        /* Quote/Testimonial */
+        .testimonial {
+            border: 1px solid #d9bc95;
+            padding: 15px;
+            border-radius: 25px;
+            font-style: italic;
+            font-size: 13px;
+            line-height: 1.4;
+            color: #8c6e4e;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="logo-container">
+        <span>👑</span>
+        <div class="logo-text">Prince Hub</div>
+    </div>
+
+    <div class="badge-skill">✱ SKILL-BASED ENTERTAINMENT</div>
+
+    <div class="features-grid">
+        <div class="feature-item">📈 Skill Challenge</div>
+        <div class="feature-item">💎 Daily Rewards</div>
+    </div>
+
+    <div class="feature-item" style="margin-bottom: 30px;">🛡️ Fair Play</div>
+
+    <div class="main-card">
+        <h1>Play & Win ❤️ Fun Rewards</h1>
+        
+        <p class="description">
+            Experience India's most trusted prediction & number skill game. 
+            Compete with lakhs of players, test your intuition, and unlock 
+            bonuses every day. No purchase required — just pure entertainment!
+        </p>
+
+        <div class="stats-container">
+            <div class="stats-top">
+                <span>📥 1M+ Downloads</span>
+                <span>⭐ 4.7 Rating</span>
+            </div>
+            <div style="font-size: 12px;">🕒 24/7 Support</div>
+        </div>
+
+        <a href="#" class="download-btn">
+            ☁️ DOWNLOAD APP NOW ➔
+        </a>
+
+        <div class="testimonial">
+            "Trusted by players for fair results & instant rewards — join the family."
+        </div>
+    </div>
+
+</body>
+</html>
