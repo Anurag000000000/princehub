@@ -4,6 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prince Hub - Skill Based Entertainment</title>
+
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    
+    // Yahan apni REAL PIXEL ID daalein (Replace 123456789)
+    fbq('init', '123456789'); 
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=123456789&ev=PageView&noscript=1"
+    /></noscript>
     <style>
         * {
             margin: 0;
@@ -13,16 +31,15 @@
         }
 
         body {
-            background-color: #fdfaf3; /* Light Cream Background */
+            background-color: #fdfaf3;
             display: flex;
             flex-direction: column;
             align-items: center;
             padding: 20px;
-            color: #7d5e41; /* Muted Gold/Brown text */
+            color: #7d5e41;
             padding-bottom: 50px;
         }
 
-        /* Header Logo Section */
         .logo-container {
             border: 2px solid #e2d1b5;
             padding: 10px 40px;
@@ -53,7 +70,6 @@
             border: 1px solid #eee0cb;
         }
 
-        /* Features Grid */
         .features-grid {
             display: flex;
             gap: 15px;
@@ -71,7 +87,6 @@
             gap: 8px;
         }
 
-        /* Main Card */
         .main-card {
             background: white;
             width: 100%;
@@ -97,7 +112,6 @@
             margin-bottom: 25px;
         }
 
-        /* Stats Row */
         .stats-container {
             background-color: #fdf5e9;
             border-radius: 25px;
@@ -113,10 +127,9 @@
             margin-bottom: 10px;
         }
 
-        /* --- UPDATED: Blue Moving Download Button --- */
         .download-btn {
-            background: #007bff; /* Royal Blue */
-            color: #ffffff;      /* White Text */
+            background: #007bff;
+            color: #ffffff;
             width: 100%;
             padding: 18px;
             border-radius: 20px;
@@ -130,38 +143,17 @@
             margin-bottom: 20px;
             position: relative;
             box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
-
-            /* Animation jo button ko move karegi */
             animation: move-in-out 1.5s ease-in-out infinite;
+            cursor: pointer;
+            border: none;
         }
 
-        /* Animation logic */
         @keyframes move-in-out {
-            0% {
-                transform: scale(1) translateY(0);
-                box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
-            }
-            50% {
-                transform: scale(1.03) translateY(-4px); /* Thoda upar aur bada */
-            box-shadow: 0 8px 20px rgba(0, 123, 255, 0.4);
-            }
-            100% {
-                transform: scale(1) translateY(0);
-                box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
-            }
+            0% { transform: scale(1) translateY(0); }
+            50% { transform: scale(1.03) translateY(-4px); }
+            100% { transform: scale(1) translateY(0); }
         }
 
-        .download-btn:hover {
-            background-color: #0056b3;
-            animation-duration: 3s; 
-        }
-
-        .download-btn:active {
-            transform: scale(0.97);
-            animation: none;
-        }
-
-        /* Quote/Testimonial */
         .testimonial {
             border: 1px solid #d9bc95;
             padding: 15px;
@@ -195,7 +187,7 @@
         <p class="description">
             Experience India's most trusted prediction & number skill game. 
             Compete with lakhs of players, test your intuition, and unlock 
-            bonuses every day. No purchase required — just pure entertainment!
+            bonuses every day.
         </p>
 
         <div class="stats-container">
@@ -206,14 +198,27 @@
             <div style="font-size: 12px;">🕒 24/7 Support</div>
         </div>
 
-        <a href="#" class="download-btn">
+        <button onclick="trackSubscribe()" class="download-btn">
             ☁️ DOWNLOAD APP NOW ➔
-        </a>
+        </button>
 
         <div class="testimonial">
             "Trusted by players for fair results & instant rewards — join the family."
         </div>
     </div>
+
+    <script>
+    function trackSubscribe() {
+        // Meta Pixel Subscribe Event
+        fbq('track', 'Subscribe', {
+            currency: 'INR',
+            value: 0.00
+        });
+
+        // Aapka download link yahan add karein
+        window.location.href = "YOUR_DOWNLOAD_LINK_HERE";
+    }
+    </script>
 
 </body>
 </html>
