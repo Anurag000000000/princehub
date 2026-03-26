@@ -113,10 +113,10 @@
             margin-bottom: 10px;
         }
 
-        /* --- UPDATED: Moving Download Button --- */
+        /* --- UPDATED: Blue Moving Download Button --- */
         .download-btn {
-            background: #d9bc95;
-            color: #4a3721;
+            background: #007bff; /* Royal Blue */
+            color: #ffffff;      /* White Text */
             width: 100%;
             padding: 18px;
             border-radius: 20px;
@@ -129,40 +129,36 @@
             gap: 10px;
             margin-bottom: 20px;
             position: relative;
-            box-shadow: 0 4px 10px rgba(74, 55, 33, 0.2);
+            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
 
-            /* Ye main line hai jo animation start karegi */
+            /* Animation jo button ko move karegi */
             animation: move-in-out 1.5s ease-in-out infinite;
         }
 
-        /* Animation Define Karein (Move in/out effect) */
+        /* Animation logic */
         @keyframes move-in-out {
             0% {
                 transform: scale(1) translateY(0);
-                box-shadow: 0 4px 10px rgba(74, 55, 33, 0.2);
+                box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
             }
             50% {
-                transform: scale(1.03) translateY(-3px); /* Thoda bada aur upar */
-                box-shadow: 0 8px 15px rgba(74, 55, 33, 0.
-                  3); /* Shadow thodi failti hai */
+                transform: scale(1.03) translateY(-4px); /* Thoda upar aur bada */
+            box-shadow: 0 8px 20px rgba(0, 123, 255, 0.4);
             }
             100% {
                 transform: scale(1) translateY(0);
-                box-shadow: 0 4px 10px rgba(74, 55, 33, 0.2);
+                box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
             }
         }
 
-        /* Hover karne pe animation slow ho jaaye */
         .download-btn:hover {
-            animation: move-in-out 3s ease-in-out infinite; 
-            background-color: #c9ab85;
+            background-color: #0056b3;
+            animation-duration: 3s; 
         }
 
-        /* Click karne pe active effect */
         .download-btn:active {
             transform: scale(0.97);
-            animation: none; /* Press hone pe move mat ho */
-            box-shadow: 0 2px 5px rgba(74, 55, 33, 0.4);
+            animation: none;
         }
 
         /* Quote/Testimonial */
